@@ -44,18 +44,18 @@ export default function Docs({ loaderData: { doc } }: Route.ComponentProps) {
   }, [hash, pathname])
 
   return (
-    <div className="grid grid-cols-1 grid-rows-[auto_1fr] md:grid-cols-[auto_14rem]">
+    <div className="grid grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[auto_14rem]">
       <div
         ref={mainRef}
         className={cn(
-          'md-prose prose dark:prose-invert order-2 overflow-auto scroll-smooth px-4 pt-8 pb-32 md:order-1 md:pt-2',
+          'lg-prose prose dark:prose-invert order-2 overflow-auto scroll-smooth px-4 pt-8 pb-32 lg:order-1 lg:pt-2',
           'max-w-none',
         )}
         // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
         dangerouslySetInnerHTML={{ __html: doc.html }}
       />
 
-      <Stack className="order-1 gap-0 overflow-auto md:order-2 md:mr-2 md:gap-4">
+      <Stack className="order-1 gap-0 overflow-auto lg:order-2 lg:mr-2 lg:gap-4">
         {/* <JobBoard className="hidden md:block" /> */}
 
         {doc.headings.length > 0 && (
